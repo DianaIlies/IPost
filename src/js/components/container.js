@@ -4,7 +4,6 @@
 import React, {Component} from 'react';
 import context, {actions, getters} from '../application-context';
 import FolderContainer from "./FolderContainer.js";
-import SearchingContainer from "./SearchingContainer.js";
 
 class Container extends Component {
   // displayName= 'Container';
@@ -12,24 +11,29 @@ class Container extends Component {
 
   static getDataBindings(getters) {
     return {
-      data: getters.myModule.data
+      data: getters.myModule.data,
+      value: getters.myModule.value
     }
-  }
-
-  constructor(props) {
-    super(props);
-    this.handleChange = ::this.handleChange;
-    this.state = {value: "", data: []};
   }
 
 
   handleChange(event) {
-    this.setState({
-      value: event.target.value
-    });
-
-
+    actions.myModule.filter({value: event.target.value});
   }
+  // constructor(props) {
+  //   super(props);
+  //   this.handleChange = ::this.handleChange;
+  //   this.state = {value: "", data: []};
+  // }
+  //
+  //
+  // handleChange(event) {
+  //   this.setState({
+  //     value: event.target.value
+  //   });
+  //
+  //
+  // }
 
 
   // constructor(props) {
@@ -59,15 +63,14 @@ class Container extends Component {
     return (<div className="widget">
 
       <input placeholder="filter..." type="text"
-             value={this.state.value}
              onChange={this.handleChange}
              className="search"
       />
 
 
-      <div>{ this.state.value ? 'Searching for:' + this.state.value : null }</div>
+      <div>{ this.props.value ? 'Searching for:' + this.props.value : null }</div>
 
-      <SearchingContainer data={this.props.data.directories} searchingText={this.state.value}/>
+      <FolderContainer data={this.props.data.directories}/>
 
     </div>)
   }

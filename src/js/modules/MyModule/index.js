@@ -2,7 +2,8 @@
  * Created by dianailies on 8/3/2016.
  */
 import BaseModule from '../../base-module';
-import tree from './stores/myModule';
+import TreeStore from './stores/myModule';
+import SearchStore from './stores/SearchStore'
 import * as actions from './actions';
 import * as getters from './getters';
 
@@ -14,7 +15,7 @@ class MyModule extends BaseModule {
   }
 
   register(context) {
-    context.registerStores({ 'tree': tree });
+    context.registerStores({ 'tree': TreeStore, 'search': SearchStore });
   }
 }
 export default new MyModule();

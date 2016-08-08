@@ -2,7 +2,7 @@
  * Created by dianailies on 8/3/2016.
  */
 import { Store, toImmutable } from 'nuclear-js';
-// import * as ActionTypes from '../action-types';
+import * as ActionTypes from '../action-types';
 
 const initialState = toImmutable({
   directories: [
@@ -70,7 +70,19 @@ class TreeStore extends Store {
   getInitialState() {
     return initialState;
   }
-
+  initialize() {
+    this.on(ActionTypes.FILTER, filter);
+  }
 }
 
 export default new TreeStore();
+
+function filter(state, payload) {
+  const nextState = state.set('value', payload.value);
+
+  if (state.equals(nextState)) {
+    return state;
+  }
+
+  return nextState;
+}

@@ -4,13 +4,15 @@ export const directories = [
 ];
 
 export const value = [
-  ['tree','search'],
-  (search) => search.get('value')
+  ['search'],
+  (search) =>  {
+    return search.get('value')
+  }
 ];
 
 export const data = [
   ['tree', 'directories'],
-  ['tree', 'search', 'value'],
+  ['search', 'value'],
 
   (directories, value) => {
     let children;
