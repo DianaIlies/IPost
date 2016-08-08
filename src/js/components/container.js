@@ -61,7 +61,7 @@ class Container extends Component {
   render() {
 
     return (<div className="widget">
-
+<div className="myTitle">~ Search ~</div>
       <input placeholder="filter..." type="text"
              onChange={this.handleChange}
              className="search"
