@@ -13,20 +13,19 @@ class FolderContainer extends Component {
 
     let output = [];
 
-
     this.props.data.forEach((item)=> {
 
       if (item.type === 'dir') {
 
         output.push(
-          <Dirs name={item.name} myItem={item} key={++index}/>
+          <Dirs name={item.name} myItem={item} key={++index} />
         );
-        console.log("NOT found matching folder");
+      //  console.log("NOT found matching folder");
 
 
       }
       else if (item.type === 'file') {
-        console.log("NOT found matching file");
+     //   console.log("NOT found matching file");
 
         output.push(<Files name={item.name} key={++index}/>);
 
