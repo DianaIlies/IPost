@@ -4,7 +4,6 @@
 import React, {Component} from 'react';
 
 class Folder extends Component {
-  // displayName: 'Folder';
   constructor(props) {
     super(props);
     this.state = {isCollapsed: true};
@@ -12,7 +11,6 @@ class Folder extends Component {
 
   handleChange() {
     this.setState({isCollapsed: !this.state.isCollapsed})
-   // console.log(this.state.isCollapsed);
   }
 
 

@@ -20,12 +20,10 @@ class FolderContainer extends Component {
         output.push(
           <Dirs name={item.name} myItem={item} key={++index} />
         );
-      //  console.log("NOT found matching folder");
 
 
       }
       else if (item.type === 'file') {
-     //   console.log("NOT found matching file");
 
         output.push(<Files name={item.name} key={++index}/>);
 

@@ -23,8 +23,6 @@ context.create({
   entityCache,
   playground,
   MyModule,
- // MyModuleStore,
-
   auth,
   intl,
   layout,
