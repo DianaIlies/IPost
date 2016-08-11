@@ -18,7 +18,7 @@ class FolderContainer extends Component {
       if (item.type === 'dir') {
 
         output.push(
-          <Dirs name={item.name} myItem={item} key={++index} />
+          <Dirs name={item.name} myItem={item} key={++index}/>
         );
 
 

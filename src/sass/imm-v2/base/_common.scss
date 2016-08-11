@@ -1,3 +1,7 @@
+body{
+  background-color: #d0f0dc;
+}
+
 .file-downloader {
   width: 0;
   height: 0;
@@ -1006,7 +1010,7 @@ div[role="dialog"]:not(.modal){
 }
 
 .filedrop-placeholder{
-  background-image: url("../img/drag-and-drop-2.png");
+//  background-image: url("../img/drag-and-drop-2.png");
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -1031,7 +1035,7 @@ div[role="dialog"]:not(.modal){
   white-space: pre-wrap; /* css-3 */
   white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
   word-wrap: break-word; /* Internet Explorer 5.5+ */
-  word-break: break-word;
+  //word-break: break-word;
 }
 
 .cke_top{
@@ -1070,13 +1074,13 @@ span.icons-group {
 
 .widget {
   padding: 18px;
-  //background-color: #D0FDFC;
+  background-color: #D0FDFC;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
-  //opacity: 0.7;
+  opacity: 0.8;
 
 }
 
-.widget > input {
+.widget > .search {
   display: block;
   width: 100%;
   min-height: 30px;
@@ -1088,16 +1092,7 @@ span.icons-group {
 
 }
 
-div > input{
-  display: block;
-  width: 90%;
-  min-height: 30px;
-  margin-bottom: 20px;
-  border: 0 none;
-  border-bottom: 1px solid #ccc;
-  outline: none;
-  opacity: 0.8;
-}
+
 
 .folder-container {
   margin: 10px;
@@ -1175,6 +1170,7 @@ div > input{
   text-align: center;
   font-size: 50px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   transition-duration: 2s;
   transition-property: transform;
 }
@@ -1185,4 +1181,25 @@ div > input{
 }
 
 
+.kitty{
+  color: #343434;
+}
 
+.widget .search {
+  background: url("http://3.bp.blogspot.com/-RwvOr4Tsl_4/Use-oT8LlAI/AAAAAAAAJPU/Qa17y8XaMvo/s1600/Bun24.png") no-repeat left center;
+  padding: 20px;
+  padding-left: 80px;
+  font-size: 13px;
+  color: gray;
+  background-size: 40px;
+
+}
+
+.widget .search:hover {
+  background: url("https://khalil-shreateh.com/stickers/bun-stickers_files/851575_392310030866309_792706737_n.gif") no-repeat left center;
+  background-size: 40px;
+}
+
+.folder-item:hover {
+  background-color: #9BECE9;
+}

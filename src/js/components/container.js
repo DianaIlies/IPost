@@ -18,11 +18,13 @@ class Container extends Component {
   handleChange(event) {
     actions.myModule.filter({value: event.target.value});
   }
- 
+
   render() {
 
     return (<div className="widget">
-<div className="myTitle">~ Search ~</div>
+
+      <div className="myTitle">~ Search ~</div>
+
       <input placeholder="filter..." type="text"
              onChange={this.handleChange}
              className="search"
